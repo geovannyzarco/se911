@@ -17,7 +17,7 @@ return new class extends Migration
             $table->unsignedBigInteger('id_estado_empleado');
             $table->unsignedBigInteger('id_unidad');
             $table->unsignedBigInteger('id_grupo');
-            $table->unsignedInteger('codigo')->nullable();
+            $table->string('codigo')->nullable();
             $table->string('nombre', 200)->nullable();
             $table->timestamps();
 
