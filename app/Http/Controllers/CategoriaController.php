@@ -28,11 +28,11 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'categoria' =>'required|string|max:200',
-            'h_personal'=>'nullable|integer',
-        ]);
-        Categoria::create($request->all);
+    $validated = $request->validate([
+        'categoria' => 'required|string|max:255',
+        'h_personales' => 'required|integer',
+    ]);
+        Categoria::create($validated);
         return redirect()->route('categorias.index')->with('success','Categoria creada.');
     }
 
