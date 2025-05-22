@@ -8,6 +8,8 @@
         <form method="POST" action="{{ route('categorias.store') }}" class="space-y-4 bg-white p-6 rounded shadow">
             @csrf
 
+
+
             <div>
                 <label class="block text-sm font-medium text-gray-700">Nombre de la Categoría</label>
                 <input type="text" name="categoria" value="{{ old('categoria') }}"
@@ -24,11 +26,10 @@
             </div>
 
             <div class="flex justify-end gap-2">
-                <a href="{{ route('categorias.index') }}" class="text-gray-600 hover:underline">Cancelar</a>
-                <button type="submit"
-                        class="bg-blue-600 px-4 py-2 rounded hover:bg-blue-700">
-                    Guardar
-                </button>
+
+                <flux:button variant="danger" href="{{ route('categorias.index') }}" class="mb-4">Cancelar</flux:button>
+                <flux:button variant="primary" type="submit" class="mb-4">Guardar</flux:button>
+
             </div>
         </form>
     </div>
