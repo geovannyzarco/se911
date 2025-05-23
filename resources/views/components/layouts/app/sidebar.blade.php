@@ -7,6 +7,12 @@
                 'url'=>route('dashboard'),
                 'current'=> request()->routeIs('dashboard'),
             ],
+            [
+                'name'=>'Categoria',
+                'icon'=>'squares-plus',
+                'url'=>route('categorias.index'),
+                'current'=> request()->routeIs('categorias.index'),
+            ],
         ]
     ];
 @endphp
