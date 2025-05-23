@@ -7,12 +7,21 @@
                 'url'=>route('dashboard'),
                 'current'=> request()->routeIs('dashboard'),
             ],
+<<<<<<< HEAD
             [
                 'name'=>'Categoria',
+=======
+                        [
+                'name'=>'Categorias',
+>>>>>>> 74b9d32aba8160aefcc3884eb4b533601e3528e0
                 'icon'=>'squares-plus',
                 'url'=>route('categorias.index'),
                 'current'=> request()->routeIs('categorias.index'),
             ],
+<<<<<<< HEAD
+=======
+
+>>>>>>> 74b9d32aba8160aefcc3884eb4b533601e3528e0
         ]
     ];
 @endphp
@@ -43,7 +52,6 @@
             </flux:navlist>
 
             <flux:spacer />
-
 
 
             <!-- Desktop User Menu -->
