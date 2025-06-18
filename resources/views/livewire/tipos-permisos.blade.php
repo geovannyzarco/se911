@@ -8,27 +8,30 @@
     </div>
 
     {{-- Tabla --}}
-    <table class="w-full border text-sm mb-4">
-        <thead class="bg-gray-100">
-            <tr>
-                <th class="border p-2">ID</th>
-                <th class="border p-2">Tipo</th>
-                <th class="border p-2">Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach($registros as $item)
-                <tr>
-                    <td class="border p-2">{{ $item->id }}</td>
-                    <td class="border p-2">{{ $item->tipo }}</td>
-                    <td class="border p-2">
-                        <flux:button wire:click="openModal('editar', {{ $item->id }})" class="text-blue-600 mr-2">Editar</flux:button>
-                        <flux:button variant="danger" wire:click="delete({{ $item->id }})" class="text-red-600">Eliminar</flux:button>
-                    </td>
-                </tr>
-            @endforeach
-        </tbody>
-    </table>
+    <div class="overflow-x-auto bg-white shadow rounded mb-4">
+        <table class="w-full border text-sm ">
+                <thead class="bg-gray-100">
+                    <tr>
+                        <th class="border p-2">ID</th>
+                        <th class="border p-2">Tipo</th>
+                        <th class="border p-2">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($registros as $item)
+                        <tr>
+                            <td class="border p-2">{{ $item->id }}</td>
+                            <td class="border p-2">{{ $item->tipo }}</td>
+                            <td class="border p-2">
+                                <flux:button wire:click="openModal('editar', {{ $item->id }})" class="text-blue-600 mr-2">Editar</flux:button>
+                                <flux:button variant="danger" wire:click="delete({{ $item->id }})" class="text-red-600">Eliminar</flux:button>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+    </div>
+
 
 {{ $registros->links('pagination::tailwind') }}
 
@@ -49,12 +52,12 @@
                     </div>
 
                     <div class="flex justify-end space-x-2">
-                        <button type="button" wire:click="closeModal" class="px-4 py-2 border rounded">
+                        <flux:button type="button" wire:click="closeModal" class="px-4 py-2 border rounded">
                             Cancelar
-                        </button>
-                        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">
+                        </flux:button>
+                        <flux:button variant="primary" type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">
                             {{ $editing ? 'Actualizar' : 'Guardar' }}
-                        </button>
+                        </flux:button>
                     </div>
                 </form>
             </div>

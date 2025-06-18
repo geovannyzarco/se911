@@ -1,12 +1,14 @@
 @php
     $groups = [
-        'Administracion'=>[
-            [
+        'Inicio'=>[
+                        [
                 'name'=>'Dashboard',
                 'icon'=>'home',
                 'url'=>route('dashboard'),
                 'current'=> request()->routeIs('dashboard'),
             ],
+        ],
+        'Administracion'=>[
             [
                 'name'=>'Categorias',
                 'icon'=>'squares-plus',
@@ -40,11 +42,11 @@
 
             <flux:navlist variant="outline">
                 @foreach ( $groups as $group => $links)
-                    <flux:navlist.group :heading="$group" class="grid">
+                    <flux:navlist.group expandable :heading="$group" class="grid">
                         @foreach ($links as $link)
                             <flux:navlist.item :icon="$link['icon']" :href="$link['url']" :current="$link['current']" >{{ $link['name'] }}</flux:navlist.item>
                         @endforeach
-                    </flux:navlist.group>
+                    </flux:navlist>
                 @endforeach
 
             </flux:navlist>
