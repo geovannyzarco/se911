@@ -8,3 +8,8 @@ Route::middleware(['auth'])->group(function () {
     })->name('tipos-permisos.index');
 });
 
+Route::middleware(['auth'])->group(function () {
+    Route::get('/grupos', function () {
+        return view('grupos.index');
+    })->name('grupos.index');
+});

@@ -21,6 +21,12 @@
                 'url'=>route('tipos-permisos.index'),
                 'current'=> request()->routeIs('tipos-permisos.index'),
             ],
+                        [
+                'name'=>'Grupos',
+                'icon'=>'squares-plus',
+                'url'=>route('grupos.index'),
+                'current'=> request()->routeIs('grupos.index'),
+            ],
 
         ]
     ];
