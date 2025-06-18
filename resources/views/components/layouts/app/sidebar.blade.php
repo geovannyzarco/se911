@@ -7,11 +7,17 @@
                 'url'=>route('dashboard'),
                 'current'=> request()->routeIs('dashboard'),
             ],
-                        [
+            [
                 'name'=>'Categorias',
                 'icon'=>'squares-plus',
                 'url'=>route('categorias.index'),
                 'current'=> request()->routeIs('categorias.index'),
+            ],
+            [
+                'name'=>'Tipos Permisos',
+                'icon'=>'squares-plus',
+                'url'=>route('tipos-permisos.index'),
+                'current'=> request()->routeIs('tipos-permisos.index'),
             ],
 
         ]

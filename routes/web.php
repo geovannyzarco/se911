@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 use App\Http\Controllers\CategoriaController;
 
+
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
@@ -20,7 +21,9 @@ Route::middleware(['auth'])->group(function () {
     Volt::route('settings/appearance', 'settings.appearance')->name('settings.appearance');
 });
 
+//--Rutas de los formularios de mantenimeinto de tablas
 Route::resource('categorias', CategoriaController::class);
 
-require __DIR__.'/auth.php';
 
+require __DIR__.'/auth.php';
+require __DIR__.'/permisos.php';

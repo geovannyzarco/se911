@@ -7,8 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class TipoPermiso extends Model
 {
     use HasFactory;
-
+    protected $table = 'tipos_permisos';
     protected $fillable = [
         'tipo',
     ];
+
 }

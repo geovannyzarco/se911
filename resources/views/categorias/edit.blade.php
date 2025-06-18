@@ -24,11 +24,11 @@
             </div>
 
             <div class="flex justify-end gap-2">
-                <a href="{{ route('categorias.index') }}" class="text-gray-600 hover:underline">Cancelar</a>
-                <button type="submit"
+                <flux:button variant="danger" href="{{ route('categorias.index') }}" >Cancelar</flux:button>
+                <flux:button variant="primary" type="submit"
                         class="bg-blue-600  px-4 py-2 rounded hover:bg-blue-700">
                     Actualizar
-                </button>
+                </flux:button>
             </div>
         </form>
     </div>

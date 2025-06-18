@@ -31,16 +31,16 @@
                             <td class="px-4 py-2">{{ $categoria->categoria }}</td>
                             <td class="px-4 py-2">{{ $categoria->h_personales }}</td>
                             <td class="px-4 py-2 text-center space-x-2">
-                                <a href="{{ route('categorias.edit', $categoria) }}"
-                                   class="text-blue-600 hover:underline">Editar</a>
+                                <flux:button href="{{ route('categorias.edit', $categoria) }}"
+                                   class="text-blue-600 hover:underline">Editar</flux:button>
                                 <form action="{{ route('categorias.destroy', $categoria) }}"
                                       method="POST" class="inline"
                                       onsubmit="return confirm('¿Eliminar esta categoría?')">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="text-red-600 hover:underline">
+                                     <flux:button variant="danger" type="submit" class="text-red-600 hover:underline">
                                         Eliminar
-                                    </button>
+                                    </flux:button>
                                 </form>
                             </td>
                         </tr>
