@@ -13,3 +13,10 @@ Route::middleware(['auth'])->group(function () {
         return view('grupos.index');
     })->name('grupos.index');
 });
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/unidades', function () {
+        return view('unidades.index');
+    })->name('unidades.index');
+});
+

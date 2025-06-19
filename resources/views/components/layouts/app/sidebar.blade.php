@@ -21,11 +21,17 @@
                 'url'=>route('tipos-permisos.index'),
                 'current'=> request()->routeIs('tipos-permisos.index'),
             ],
-                        [
+            [
                 'name'=>'Grupos',
                 'icon'=>'squares-plus',
                 'url'=>route('grupos.index'),
                 'current'=> request()->routeIs('grupos.index'),
+            ],
+            [
+                'name'=>'Unidades',
+                'icon'=>'squares-plus',
+                'url'=>route('unidades.index'),
+                'current'=> request()->routeIs('unidades.index'),
             ],
 
         ]
