@@ -33,6 +33,12 @@
                 'url'=>route('unidades.index'),
                 'current'=> request()->routeIs('unidades.index'),
             ],
+                        [
+                'name'=>'Empleados',
+                'icon'=>'squares-plus',
+                'url'=>route('empleados.index'),
+                'current'=> request()->routeIs('empleados.index'),
+            ],
 
         ]
     ];

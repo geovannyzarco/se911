@@ -20,3 +20,6 @@ Route::middleware(['auth'])->group(function () {
     })->name('unidades.index');
 });
 
+Route::middleware(['auth'])->group(function () {
+    Route::get('/empleados', fn() => view('empleados.index'))->name('empleados.index');
+});
