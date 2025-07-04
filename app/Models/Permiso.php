@@ -29,5 +29,10 @@ class Permiso extends Model
     {
         return $this->belongsTo(Estado::class, 'id_estado');
     }
+
+    public function empleado()
+    {
+        return $this->belongsTo(Empleado::class, 'id_empleado');
+    }
 }
 

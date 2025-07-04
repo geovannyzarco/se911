@@ -36,4 +36,9 @@ class Empleado extends Model
     {
         return $this->belongsTo(Unidad::class, 'id_unidad');
     }
+
+    public function permisos()
+    {
+        return $this->hasMany(Permiso::class, 'id_empleado');
+    }
 }

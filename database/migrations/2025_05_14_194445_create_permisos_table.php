@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('permisos', function (Blueprint $table) {
             $table->id();
+
             $table->unsignedBigInteger('id_tipo_permiso');
             $table->unsignedBigInteger('id_estado');
             $table->date('fecha_solicitud')->nullable();
@@ -22,6 +23,8 @@ return new class extends Migration
             $table->text('adjunto')->nullable();
             $table->text('comentario')->nullable();
             $table->timestamps();
+
+
 
             // Índices y claves foráneas
             $table->foreign('id_tipo_permiso')
@@ -35,6 +38,8 @@ return new class extends Migration
                   ->on('estados')
                   ->onDelete('cascade')
                   ->onUpdate('cascade');
+
+
         });
     }
 
