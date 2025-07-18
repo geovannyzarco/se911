@@ -1,6 +1,8 @@
 <?php
-use Illuminate\Support\Facades\Route;
 
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AccionController;
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/tipos-permisos', function () {
@@ -22,4 +24,8 @@ Route::middleware(['auth'])->group(function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/empleados', fn() => view('empleados.index'))->name('empleados.index');
+});
+
+Route::middleware(['auth'])->group(function () {
+   Route::get('/solicitudes', \App\Livewire\Solicitudes\Index::class)->name('solicitudes.index');
 });

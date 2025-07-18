@@ -1,11 +1,17 @@
 @php
     $groups = [
         'Inicio'=>[
-                        [
+            [
                 'name'=>'Dashboard',
                 'icon'=>'home',
                 'url'=>route('dashboard'),
                 'current'=> request()->routeIs('dashboard'),
+            ],
+            [
+                'name'=>'Solicitudes',
+                'icon'=>'document',
+                'url'=>route('solicitudes.index'),
+                'current'=> request()->routeIs('solicitudes.index'),
             ],
         ],
         'Administracion'=>[
